@@ -1,0 +1,25 @@
+/* https://medium.com/@ferie/detect-a-touch-device-with-only-css-9f8e30fa1134 */
+/* smartphones, touchscreens */
+@custom-media --device--touch (hover: none) and (pointer: coarse);
+/* stylus-based screens */
+@custom-media --device--stylus (hover: none) and (pointer: fine);
+/* Nintendo Wii controller, Microsoft Kinect */
+@custom-media --device-controller (hover: hover) and (pointer: coarse);
+/* mouse, touch pad */
+@custom-media --device--mouse (hover: hover) and (pointer: fine);
+
+@custom-media --screen-less-than-768 (width < 48rem);
+@custom-media --screen-more-or-640 (width >= 40rem);
+@custom-media --screen-more-or-768 (width >= 48rem);
+
+@custom-media --screen-more-or-1024 (width >= 64rem);
+@custom-media --screen-less-than-1024 (width < 64rem);
+
+@custom-media --screen-more-or-1280 (width >= 80rem);
+@custom-media --screen-less-than-1280 (width < 80rem);
+
+@custom-media --screen-more-or-1440 (width >= 90rem);
+@custom-media --screen-less-than-1440 (width < 90rem);
+
+@custom-media --screen-more-or-1600 (width >= 100rem);
+@custom-media --screen-less-than-1600 (width < 100rem);

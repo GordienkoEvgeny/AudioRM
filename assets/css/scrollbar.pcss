@@ -1,0 +1,46 @@
+/* Стилизация скроллов */
+:root {
+    --scroll-width-px: .375rem; /* 6px */ /* для вертикального скролла */
+    --scroll-height-px: var(--scroll-width-px); /* для горизонтального скролла */
+    --scroll-width-word: thin;
+    --scroll-track-color: transparent;
+    --scroll-thumb-color: transparent;
+    --scroll-corner-color: transparent;
+    --scroll-track-border-radius: 0;
+    --scroll-thumb-border-radius: 0.25rem; /* 4px */
+}
+
+.scrollbar-default {
+    scrollbar-color: var(--scroll-thumb-color) var(--scroll-track-color);
+    scrollbar-width: var(--scroll-width-word);
+}
+
+.scrollbar-default::-webkit-scrollbar {
+    width: var(--scroll-width-px);
+    height: var(--scroll-height-px);
+}
+
+.scrollbar-default::-webkit-scrollbar-track {
+    background: var(--scroll-track-color);
+    border-radius: var(--scroll-track-border-radius);
+}
+
+.scrollbar-default::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-color);
+    border-radius: var(--scroll-thumb-border-radius);
+}
+
+.scrollbar-default::-webkit-scrollbar-corner {
+    background: var(--scroll-corner-color);
+}
+
+
+/* Класс для скрытия скролла */
+.scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}

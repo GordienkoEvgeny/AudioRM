@@ -1,0 +1,45 @@
+@import "fonts/index.pcss";
+
+@import "_reset.pcss";
+@import "_utils.pcss";
+@import "uiKit/index.pcss";
+
+:root {
+    --backdrop-z-index: 100;
+    --sidebar-z-index: 150;
+    --dialog-z-index: 200;
+    --element-overlay-z-index: 300;
+    --toast-z-index: 400;
+
+    --scrolbar-width--open: 14rem;
+    --scrolbar-width--closed: 4.5rem;
+
+    --scrolbar-width: var(--scrolbar-width--open);
+}
+
+*, *::before, *::after {
+    font-family: "Aeonik", sans-serif;
+}
+
+html, body {
+    font-family: "Aeonik", sans-serif;
+}
+
+/* #_root задается в nuxt.config */
+html, body, #_root {
+    height: 100%;
+}
+
+h1 {
+    font-family: 'Orbicular';
+}
+
+.inclusively-hidden:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
