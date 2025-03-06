@@ -5,16 +5,16 @@ import Footer from '@/widgets/Footer.vue'
 <template>
     <div class="layout-default">
         <div class="container">
-            <Header />
+            <!-- <Header /> -->
             <slot />
-            <Footer />
+            <!-- <Footer /> -->
         </div>
     </div>
 </template>
 
 <style scoped lang="postcss">
 .layout-default {
-    background-image: url('/public/images/background2.jpg');
+    background-image: url('/public/images/bacground2.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import UIRotatingButton from '~/components/ui/ui-button/UIRotatingButton.vue'
+import MusicPlayer from '~/components/MusicPlayer.vue'
 
 console.log('process.server:', process.server)
 
@@ -10,7 +11,7 @@ function handleClick() {
 
 <template>
     <div class="index-page">
-        <UIRotatingButton class="index-page__button" />
+        <MusicPlayer />
     </div>
 </template>
 
