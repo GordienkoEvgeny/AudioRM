@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import UIButton from '~/components/ui/ui-button/UIButton.vue'
+import UIRotatingButton from '~/components/ui/ui-button/UIRotatingButton.vue'
 
 console.log('process.server:', process.server)
 
@@ -10,18 +10,23 @@ function handleClick() {
 
 <template>
     <div class="index-page">
-        <UIButton class="index-page__button" @click="handleClick">Click me</UIButton>
+        <UIRotatingButton class="index-page__button" />
     </div>
 </template>
 
 <style scoped lang="postcss">
-
 .index-page {
-    background-color: rgb(255, 255, 255);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .index-page__button {
-    background-color: rgb(142, 139, 139);
-    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2;
 }
 </style>

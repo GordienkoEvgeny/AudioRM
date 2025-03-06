@@ -1,13 +1,22 @@
+<script setup lang="ts">
+import Header from '@/widgets/Header.vue'
+import Footer from '@/widgets/Footer.vue'
+</script>
 <template>
     <div class="layout-default">
-        <p class="text-white">Default layout</p>
-        <slot />
+        <div class="container">
+            <Header />
+            <slot />
+            <Footer />
+        </div>
     </div>
 </template>
 
 <style scoped lang="postcss">
 .layout-default {
-    background-color: rgb(0, 0, 0);
+    background-image: url('/public/images/background2.jpg');
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100vh;
     min-height: 100vh;
@@ -15,7 +24,12 @@
     flex-direction: column;
 }
 
-.text-white {
-    color: white;
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 </style>
